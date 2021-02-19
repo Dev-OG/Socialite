@@ -32,4 +32,7 @@ module.exports.logIn = async (req, res) => {
   }
 };
 
-module.exports.logOut = async (req, res) => {};
+module.exports.logOut = async (req, res) => {
+    res.cookie('jwt', '', {maxAge: 1});
+    res.redirect('/');
+};
