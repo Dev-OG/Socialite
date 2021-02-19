@@ -1,6 +1,6 @@
 const UserModel = require("../models/user.model");
 const jwt = require("jsonwebtoken");
-const { signUpErrors } = require("../utils/errors.utils");
+const { signUpErrors, logInErrors } = require("../utils/errors.utils");
 
 const maxAge = 3 * 24 * 60 * 60 * 1000;
 const createToken = (id) => {
@@ -30,7 +30,8 @@ module.exports.logIn = async (req, res) => {
     res.cookie("jwt", token, { httpOnly: true, maxAge: maxAge });
     res.status(200).json({ user: user._id });
   } catch (err) {
-    res.status(200).send({ err });
+    const errors = signInErrors(err);
+    res.status(200).send({ errors });
   }
 };
 
