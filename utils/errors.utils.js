@@ -26,3 +26,15 @@ module.exports.logInErrors = (err) => {
   if (err.message.includes("password")) errors.email = "Wrong password";
   return errors;
 };
+
+module.exports.uploadErrors = (err) => {
+  let errors = { format: '', maxSize: ''};
+
+  if (err.message.includes('invalid file'))
+    errors.format = 'Unauthorized File Format. Please upload jpg, jpeg or png only.';
+
+  if (err.message.includes('max size'))
+    errors.maxSize = "Your image exceed 500ko.";
+
+  return errors
+}
