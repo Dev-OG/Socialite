@@ -1,6 +1,8 @@
 # 🚀 Javascript full-stack 🚀
-## MERN Stack
-### React / Express / MongoDB / Redux
+
+## Socialite | Social Network Lite For Small Project
+### MERN Stack
+#### React / Express / MongoDB / Redux
 
 Start server : `npm start`
 
@@ -8,7 +10,7 @@ Start client : `cd client` + `npm start`
 
 _____________________________
 
-### Back config :
+#### Back config :
 
 * Put your cluster info inside `/config/db.js`
 * Create `.env` file inside `/config/` within the following data
@@ -19,7 +21,7 @@ _____________________________
   
 _________________________
   
-### Front config : 
+#### Front config : 
 * Create a `.env` file within the server URL :
   - REACT_APP_API_URL=http://localhost:5000/ `your server url`
     
@@ -28,4 +30,4 @@ _____________________________
 ![Alt text](./client/public/img/screenshot.jpg "Screenshot")
 
   
-💻 Made by Julien Az, November 2020. Free to use 
+💻 Made by Andy Malpart | Origine Graphix, February 2021. Free to use 
